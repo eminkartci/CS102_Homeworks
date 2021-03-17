@@ -1,4 +1,6 @@
-package src;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class AppleStore{
 
@@ -104,6 +106,20 @@ public class AppleStore{
 
         // otherwise false
         return false;
+    }
+
+    public void saveStoreAsTxt(){
+
+        try {
+            FileWriter myWriter = new FileWriter(new File(this.storeName.replace(' ', '_')+".txt"));
+            myWriter.write(this.toString());
+            myWriter.close();
+            System.out.println("The store is successfully saved.");
+          } catch (IOException e) {
+            System.out.println("A problem occured while saving the store!!");
+            e.printStackTrace();
+          }
+
     }
 
 }

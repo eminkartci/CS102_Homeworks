@@ -1,0 +1,6 @@
+
+     ---------------> Apple Store <---------------
+ | Apple Store Name         : Zorlu Apple Store
+ | The Cost of a MacBook    : 1200.0
+ | The Price of a MacBook   : 1500.0
+ | The Excahnge Rate        : 1 USD = 8.0 TL

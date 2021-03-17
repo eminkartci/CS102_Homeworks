@@ -1,5 +1,3 @@
-package src;
-
 public class Main {
 
     public static void main(String[] args){
@@ -15,6 +13,8 @@ public class Main {
         store1.printStoreFinancials();
 
         store1.setExchangeRate(8);
+
+        store1.saveStoreAsTxt();
 
     }
     
