@@ -4,3 +4,10 @@
  | The Cost of a MacBook    : 1200.0
  | The Price of a MacBook   : 1500.0
  | The Excahnge Rate        : 1 USD = 8.0 TL
+
+
+Total Number of Macs Sold: 15
+Total Revenue: 180000.0
+Total Profit: 36000.0
+
+All Rights Reserved @2021 Emin Kartci
