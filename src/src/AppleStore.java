@@ -31,6 +31,7 @@ public class AppleStore{
             this.soldMacCount += numberOfMacsSold;
             System.out.println(numberOfMacsSold + " macs sold.");
         }else {
+            System.out.println("The stock is limited: " + this.macStock);
             System.out.println("The number of macs sold " + numberOfMacsSold + " is not valid! Try again !!");
         }
     }
@@ -95,7 +96,8 @@ public class AppleStore{
 
     private boolean checkMacsSold(float soldMacCount){
         // if rate is not 0 or negative
-        if (soldMacCount > 0){
+        // And less than stock amount
+        if (soldMacCount > 0 && soldMacCount <= this.macStock){
             // return true
             return true;
         }
