@@ -7,35 +7,56 @@ public class AppleStore{
     private float macCost;      // Mac Cost in dollars - including taxes
     private float macPrice;     // Mac price in dollars
     private int soldMacCount;
+    private int macStock;       // Amount of mac that store can sell
 
-    public AppleStore(String storeName,float macCost,float macPrice){
+    public AppleStore(String storeName,float macCost,float macPrice,int macStock){
         this.storeName      = storeName;
         this.exchangeRate   = (float) 7.5;
         this.macCost        = macCost;
         this.macPrice       = macPrice;
         this.soldMacCount   = 0;
+        this.macStock       = macStock;
+    }
+
+    // Another constructor
+        // If mac stock is not defined
+        // Defalut value is 100 units
+    public AppleStore(String storeName,float macCost,float macPrice){
+        this(storeName, macCost, macPrice, 100); 
     }
 
     public void sellMacs(int numberOfMacsSold){
-        this.soldMacCount += numberOfMacsSold;
-        System.out.println(numberOfMacsSold + " macs sold.");
+
+        if (this.checkMacsSold(numberOfMacsSold)){
+            this.soldMacCount += numberOfMacsSold;
+            System.out.println(numberOfMacsSold + " macs sold.");
+        }else {
+            System.out.println("The number of macs sold " + numberOfMacsSold + " is not valid! Try again !!");
+        }
     }
 
     public void setExchangeRate(float newRate){
-        this.exchangeRate = newRate;
 
-        System.out.println("\nThe exchange rate is changed !!");
-        System.out.println("The exchange rate: 1 USD = "+ newRate + " TL");
+        if (this.checkExchangeRate(newRate)){
+
+            this.exchangeRate = newRate;
+
+            System.out.println("\nThe exchange rate is changed !!");
+            System.out.println("The exchange rate: 1 USD = "+ newRate + " TL");
+        }else {
+            System.out.println("The given exchange rate: " + newRate + " is not valid! Try again !!");
+        }
+        
     }
 
     // calculate and return gross  revenue
-    public float getRevenue(){
+    private float getRevenue(){
         // Revenue = Unit Price * Sales Volume
         return (this.macPrice * this.soldMacCount) * this.exchangeRate;
     }
 
     // calculate and return profit of the store
-    public float getProfit(){
+    private float getProfit(){
         // Profit = Revenue - Unit Cost * Sales Volume
         return this.getRevenue() - (this.macCost * this.soldMacCount) * this.exchangeRate;
     }
@@ -57,6 +78,30 @@ public class AppleStore{
         System.out.println("\nTotal Number of Macs Sold: "    +this.soldMacCount );
         System.out.println("Total Revenue: "                +this.getRevenue() );
         System.out.println("Total Profit: "                 +this.getProfit() );
+    }
+
+
+    // additional functions
+    private boolean checkExchangeRate(float exchangeRate){
+        // if rate is not 0 or negative
+        if (exchangeRate > 0){
+            // return true
+            return true;
+        }
+
+        // otherwise false
+        return false;
+    }
+
+    private boolean checkMacsSold(float soldMacCount){
+        // if rate is not 0 or negative
+        if (soldMacCount > 0){
+            // return true
+            return true;
+        }
+
+        // otherwise false
+        return false;
     }
 
 }
