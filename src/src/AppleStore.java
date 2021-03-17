@@ -10,18 +10,27 @@ public class AppleStore{
 
     public AppleStore(String storeName,float macCost,float macPrice){
         this.storeName      = storeName;
-        this.exchangeRate   = 7.5;
+        this.exchangeRate   = (float) 7.5;
         this.macCost        = macCost;
         this.macPrice       = macPrice;
         this.soldMacCount   = 0;
     }
 
-    // public AppleStore(String storeName,float macCost,float macPrice,int soldMacCount){
-    //     this(storeName,8,macCost,macPrice,soldMacCount);
-    // }
+    public void sellMacs(int numberOfMacsSold){
 
-    // public AppleStore(String storeName,float macCost,float macPrice){
-    //     this(storeName,8,macCost,macPrice,0);
-    // }
+        System.out.println(numberOfMacsSold + " macs sold.");
+    }
+
+    public void setExchangeRate(float newRate){
+        this.exchangeRate = newRate;
+
+        System.out.println("The exchange rate is changed !!");
+        System.out.println("The exchange rate: 1 USD = "+ newRate + " TL");
+    }
+
+    public float getRevenue(){
+        return this.macPrice * this.soldMacCount;
+    }
+    
 
 }
