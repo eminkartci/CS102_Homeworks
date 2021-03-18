@@ -164,4 +164,29 @@ public class AppleStore{
 
     }
 
+    // Export Macs
+    public void exportMacs(int macAmount){
+        // If stores' macs are not enough, store can order new macs
+        if(checkExportMacs(macAmount)){
+            // if the number is valid then increase the mac amount
+            this.macStock += macAmount;
+        }else{
+            // inform 
+            System.out.println("The given order amount: " + macAmount + " is not valid! Try again !!");
+        }   
+
+    }
+
+    private boolean checkExportMacs(int macAmount){
+        // if rate is not 0 or negative
+        // And less than stock amount
+        if (macAmount > 0 ){
+            // return true
+            return true;
+        }
+
+        // otherwise false
+        return false;   
+    }
+
 }
