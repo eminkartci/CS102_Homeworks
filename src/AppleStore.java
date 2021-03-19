@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class AppleStore{
 
-    private String storeName;   // AppleStore name in Turkey like Zorlu Apple Store
+	private String storeName;   // AppleStore name in Turkey like Zorlu Apple Store
     private float exchangeRate; // Dollar / TL Exchange Rate
     private float macCost;      // Mac Cost in dollars - including taxes
     private float macPrice;     // Mac price in dollars
@@ -188,5 +188,53 @@ public class AppleStore{
         // otherwise false
         return false;   
     }
+
+
+    // GETTER SETTERS
+
+    public String getStoreName() {
+		return storeName;
+	}
+
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
+	}
+
+	public float getMacCost() {
+		return macCost;
+	}
+
+	public void setMacCost(float macCost) {
+		this.macCost = macCost;
+	}
+
+	public float getMacPrice() {
+		return macPrice;
+	}
+
+	public void setMacPrice(float macPrice) {
+		this.macPrice = macPrice;
+	}
+
+	public int getSoldMacCount() {
+		return soldMacCount;
+	}
+
+	public void setSoldMacCount(int soldMacCount) {
+		this.soldMacCount = soldMacCount;
+	}
+
+	public int getMacStock() {
+		return macStock;
+	}
+
+	public void setMacStock(int macStock) {
+		this.macStock = macStock;
+	}
+
+	public float getExchangeRate() {
+		return exchangeRate;
+	}
+
 
 }
