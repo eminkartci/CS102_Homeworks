@@ -10,8 +10,11 @@ public class Point {
         this.y = y;
     }
 
+    // Print point's information
     public void print_point(){
-        String pointInfo = "x coordinate: "+ this.x + " & y coordinate: " + this.y;
+        // create a content
+        String pointInfo = "("+ this.x + "," + this.y + ")";
+        // print 
         System.out.println(pointInfo);
     }
     

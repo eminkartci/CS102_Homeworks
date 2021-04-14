@@ -12,7 +12,7 @@ public class Trapezoid extends Quadrilateral{
         // Points
         for( int i = 0 ; i < 4 ; i++){
             // order of the points starting from 1 to 4
-            System.out.println( "Point " + (i + 1)+": ");
+            System.out.print( "Point " + (i + 1)+": ");
             // point coordinate
             getPoints()[i].print_point();
         }
