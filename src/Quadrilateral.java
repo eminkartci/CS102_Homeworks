@@ -26,5 +26,11 @@ public class Quadrilateral {
             this.points[i].print_point();
         }
     }
+
+    // GETTER - SETTER
+    
+    public Point[] getPoints() {
+        return this.points;
+    }
     
 }
