@@ -7,7 +7,7 @@ public class Trapezoid extends Quadrilateral{
     // to print console overwrite the function
     public void print_console(){
         // type 
-        System.out.println(" --- Trapezoid --- ");
+        System.out.println("\n --- Trapezoid --- ");
 
         // Points
         for( int i = 0 ; i < 4 ; i++){

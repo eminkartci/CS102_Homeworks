@@ -7,7 +7,7 @@ public class Rectangle extends Parallelogram{
     // to print console 
     public void print_console(){
         // type 
-        System.out.println(" --- Parallelogram --- ");
+        System.out.println("\n --- Rectangle --- ");
 
         // Points
         for( int i = 0 ; i < 4 ; i++){

@@ -9,7 +9,7 @@ public class Square extends Rectangle{
     // to print console 
     public void print_console(){
         // type 
-        System.out.println(" --- Square --- ");
+        System.out.println("\n --- Square --- ");
 
         // Points
         for( int i = 0 ; i < 4 ; i++){
