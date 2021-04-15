@@ -17,5 +17,14 @@ public class Point {
         // print 
         System.out.println(pointInfo);
     }
+
+    // GETTER - SETTER
+
+    public double getX(){
+        return this.x;
+    }
     
+    public double getY(){
+        return this.y;
+    }
 }

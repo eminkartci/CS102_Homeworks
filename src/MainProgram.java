@@ -5,21 +5,23 @@ public class MainProgram {
         // Generate Objects
 
             // Trapezoid
-            Trapezoid trapezoid = new Trapezoid(new Point(0,0),new Point(0,1),new Point(1,0),new Point(1,1));
+            Trapezoid trapezoid = new Trapezoid(new Point(4,10),new Point(9,7),new Point(11,2),new Point(2,2));
             trapezoid.print_console();
+            trapezoid.calculateArea();
 
             //Parallelogram
-            Parallelogram parallelogram = new Parallelogram(new Point(0,0),new Point(5,0),new Point(2,3),new Point(2,3));
+            Parallelogram parallelogram = new Parallelogram(new Point(0,0),new Point(5,0),new Point(2,3),new Point(7,3));
             parallelogram.print_console();
+            parallelogram.calculateArea();
 
             // Rectangle
-            Rectangle rectangle = new Rectangle(new Point(0,0),new Point(5,0),new Point(0,3),new Point(5,3));
+            Rectangle rectangle = new Rectangle(new Point(1,1),new Point(6,1),new Point(6,6),new Point(1,6));
             rectangle.print_console();
-
+            rectangle.calculateArea();
             // Square
-            Square square = new Square(new Point(0,0),new Point(6,0),new Point(0,6),new Point(6,6));
+            Square square = new Square(new Point(0,0),new Point(6,0),new Point(6,6),new Point(0,6));
             square.print_console();
-
+            square.calculateArea();
     }
     
 }

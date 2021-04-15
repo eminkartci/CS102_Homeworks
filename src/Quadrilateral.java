@@ -33,4 +33,25 @@ public class Quadrilateral {
         return this.points;
     }
     
+    public void calculateArea(){
+
+        double area = 0,positive = 0,negative = 0;
+
+        for(int i = 0 ; i < this.points.length; i++){
+
+            if(i == this.points.length-1){
+                positive = this.points[i].getX() * this.points[0].getY();
+                negative = this.points[0].getX() * this.points[i].getY();
+            }else{
+                positive = this.points[i].getX() * this.points[i+1].getY();
+                negative = this.points[i+1].getX() * this.points[i].getY();
+            }
+
+            area += positive - negative;
+            System.out.println("Positive: " + positive+ "\nNegative: " + negative + "\nArea: "+ area);
+        }
+
+        area = Math.abs(area) / 2;
+        System.out.println("The are is " + area);
+    }
 }
