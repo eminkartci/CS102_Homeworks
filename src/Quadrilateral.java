@@ -15,16 +15,20 @@ public class Quadrilateral {
 
     // to print console 
     public void print_console(){
+        System.out.println(toString());
+    }
+
+    public String toString(){
         // type 
-        System.out.println("\n --- Quadrilateral --- ");
+        String content = "\n --- Quadrilateral --- ";
 
         // Points
         for( int i = 0 ; i < 4 ; i++){
             // order of the points starting from 1 to 4
-            System.out.print("Point " + (i + 1)+": ");
+            content += "\nPoint " + (i + 1)+": " +this.points[i].toString();
             // point coordinate
-            this.points[i].print_point();
         }
+        return content;
     }
 
     // GETTER - SETTER

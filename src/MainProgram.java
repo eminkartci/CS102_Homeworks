@@ -18,6 +18,7 @@ public class MainProgram {
             Rectangle rectangle = new Rectangle(new Point(1,1),new Point(6,1),new Point(6,6),new Point(1,6));
             rectangle.print_console();
             rectangle.calculateArea();
+            rectangle.plotOnConsole();
             // Square
             Square square = new Square(new Point(0,0),new Point(6,0),new Point(6,6),new Point(0,6));
             square.print_console();

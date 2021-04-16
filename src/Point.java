@@ -12,10 +12,11 @@ public class Point {
 
     // Print point's information
     public void print_point(){
-        // create a content
-        String pointInfo = "("+ this.x + "," + this.y + ")";
-        // print 
-        System.out.println(pointInfo);
+        System.out.println(this.toString());
+    }
+
+    public String toString(){
+        return "("+ this.x + "," + this.y + ")";
     }
 
     // GETTER - SETTER

@@ -19,30 +19,28 @@ public class Parallelogram extends Trapezoid{
         this(p1, p2, p3, p4, Double.toString(Math.random() * 10000),"White");
     }
 
-    // to print console overwrite the function
-    public void print_console(){
+    public String toString(){
         // type 
-        System.out.println("\n --- Parallelogram --- ");
+        String content = "\n --- Parallelogram --- ";
 
         // Points
         for( int i = 0 ; i < 4 ; i++){
             // order of the points starting from 1 to 4
-            System.out.print( "Point " + (i + 1)+": ");
+            content += "\nPoint " + (i + 1)+": " +getPoints()[i].toString();
             // point coordinate
-            getPoints()[i].print_point();
         }
+        return content;
     }
-
 
     public void saveAsTxt(){
 
         try {
             // Create a filewriter
                 // file parameter
-            FileWriter myWriter = new FileWriter(new File(this.ID+"."+this.getColor()+"txt"));
+            FileWriter myWriter = new FileWriter(new File(this.ID.replace(".", "")+"txt"));
 
             // write it
-            myWriter.write("Parallelogram");
+            myWriter.write(toString());
             // close properly
             myWriter.close();
 

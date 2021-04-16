@@ -13,19 +13,17 @@ public class Trapezoid extends Quadrilateral{
         this(p1, p2, p3, p4,"white");
     }
 
-    // to print console overwrite the function
-    public void print_console(){
+    public String toString(){
         // type 
-        System.out.println("\n --- Trapezoid --- ");
-        System.out.println("Color: "+this.color);
+        String content = "\n --- Trapezoid --- ";
 
         // Points
         for( int i = 0 ; i < 4 ; i++){
             // order of the points starting from 1 to 4
-            System.out.print( "Point " + (i + 1)+": ");
+            content += "\nPoint " + (i + 1)+": " +getPoints()[i].toString();
             // point coordinate
-            getPoints()[i].print_point();
         }
+        return content;
     }
 
     public void setRandomColor(){
