@@ -33,5 +33,10 @@ public class Trapezoid extends Quadrilateral{
         Random random = new Random();
         this.color = colors[random.nextInt(colors.length)];
     }
+
+    // GETTER SETTER
+    public String getColor(){
+        return this.color;
+    }
     
 }

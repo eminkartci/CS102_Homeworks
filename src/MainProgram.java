@@ -13,7 +13,7 @@ public class MainProgram {
             Parallelogram parallelogram = new Parallelogram(new Point(0,0),new Point(5,0),new Point(2,3),new Point(7,3));
             parallelogram.print_console();
             parallelogram.calculateArea();
-
+            parallelogram.saveAsTxt();
             // Rectangle
             Rectangle rectangle = new Rectangle(new Point(1,1),new Point(6,1),new Point(6,6),new Point(1,6));
             rectangle.print_console();
