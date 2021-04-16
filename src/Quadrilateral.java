@@ -48,7 +48,9 @@ public class Quadrilateral {
             }
 
             area += positive - negative;
-            System.out.println("Positive: " + positive+ "\nNegative: " + negative + "\nArea: "+ area);
+            
+            // Debugging Code
+            //System.out.println("Positive: " + positive+ "\nNegative: " + negative + "\nArea: "+ area);
         }
 
         area = Math.abs(area) / 2;
