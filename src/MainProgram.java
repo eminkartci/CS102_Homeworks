@@ -11,6 +11,7 @@ public class MainProgram {
 
             //Parallelogram
             Parallelogram parallelogram = new Parallelogram(new Point(0,0),new Point(5,0),new Point(2,3),new Point(7,3));
+            parallelogram.setRandomColor();
             parallelogram.print_console();
             parallelogram.calculateArea();
             parallelogram.saveAsTxt();
@@ -26,7 +27,7 @@ public class MainProgram {
             // square.saveAsTxt();
 
             Square square = new Square(new Point(0,0),new Point(6,0),new Point(0,6),new Point(6,6));
-            square.calculateArea();
+            square.setRandomColor();
             square.print_console();
     }
     

@@ -1,13 +1,26 @@
 public class Rectangle extends Parallelogram{
 
+    // Attributes
     private int height;
     private int width;
+    private static final String DEFAULT_COLOR = "Red";
 
-    public Rectangle(Point p1, Point p2, Point p3, Point p4) {
-        super(p1, p2, p3, p4);
+    // Main Constructor
+    public Rectangle(Point p1, Point p2, Point p3, Point p4,String ID,String color) {
+        super(p1, p2, p3, p4,ID,color);
         this.width = calculateWidth();
         this.height = calculateHeight();
     }
+
+    // Default color is RED
+    public Rectangle(Point p1, Point p2, Point p3, Point p4,String ID) {
+        this(p1, p2, p3, p4, ID, DEFAULT_COLOR);
+    }
+
+    public Rectangle(Point p1, Point p2, Point p3, Point p4) {
+        this(p1, p2, p3, p4,getRandomID(), DEFAULT_COLOR);
+    }
+
 
     public String toString(){
         // type 

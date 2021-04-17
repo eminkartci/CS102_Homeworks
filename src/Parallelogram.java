@@ -4,19 +4,29 @@ import java.io.IOException;
 
 public class Parallelogram extends Trapezoid{
 
+    private static final String DEFAULT_COLOR = "Green";
+
+    // Attributes
     private String ID;
 
+    // Main constructor
     public Parallelogram(Point p1, Point p2, Point p3, Point p4,String ID,String color) {
         super(p1, p2, p3, p4,color);
         this.ID = ID;
     }
 
-    public Parallelogram(Point p1, Point p2, Point p3, Point p4,String color) {
-        this(p1, p2, p3, p4, Double.toString(Math.random() * 10000),color);
+    // Default color is green
+    public Parallelogram(Point p1, Point p2, Point p3, Point p4,String ID) {
+        this(p1, p2, p3, p4, ID,DEFAULT_COLOR);
     }
 
+    // RANDOM ID
     public Parallelogram(Point p1, Point p2, Point p3, Point p4) {
-        this(p1, p2, p3, p4, Double.toString(Math.random() * 10000),"White");
+        this(p1, p2, p3, p4,getRandomID() ,DEFAULT_COLOR);
+    }
+
+    public static String getRandomID(){
+        return Double.toString(Math.random() * 10000);
     }
 
     public String toString(){

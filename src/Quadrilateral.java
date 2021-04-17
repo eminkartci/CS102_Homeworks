@@ -9,10 +9,13 @@ public class Quadrilateral {
 
     // Main constructure 
     public Quadrilateral(Point p1,Point p2,Point p3,Point p4){
+        // assign the points
         this.points[0] = p1;
         this.points[1] = p2;
         this.points[2] = p3;
         this.points[3] = p4;
+
+        // immidiately calculate the area
         calculateArea();
     }
 
