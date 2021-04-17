@@ -17,6 +17,7 @@ public class Quadrilateral {
 
         // immidiately calculate the area
         calculateArea();
+        System.out.println("Area is "+ this.area);
     }
 
     // to print console 

@@ -10,17 +10,16 @@ public class Square extends Rectangle{
     public Square(Point p1, Point p2, Point p3, Point p4,String ID,String color) {
         super(p1, p2, p3, p4,ID,color);
         calculateEdge();
+        calculateArea();
     }
 
     // Default color is blue
     public Square(Point p1, Point p2, Point p3, Point p4,String ID) {
-        super(p1, p2, p3, p4,ID,DEFAULT_COLOR);
-        calculateEdge();
+        this(p1, p2, p3, p4,ID,DEFAULT_COLOR);
     }
 
     public Square(Point p1, Point p2, Point p3, Point p4) {
-        super(p1, p2, p3, p4,getRandomID(),DEFAULT_COLOR);
-        calculateEdge();
+        this(p1, p2, p3, p4,getRandomID(),DEFAULT_COLOR);
     }
 
     // Override calculate area method

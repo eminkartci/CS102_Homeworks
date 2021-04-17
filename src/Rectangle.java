@@ -10,6 +10,7 @@ public class Rectangle extends Parallelogram{
         super(p1, p2, p3, p4,ID,color);
         this.width = calculateWidth();
         this.height = calculateHeight();
+        calculateArea();
     }
 
     // Default color is RED
