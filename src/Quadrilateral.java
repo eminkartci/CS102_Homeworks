@@ -42,7 +42,59 @@ public class Quadrilateral {
     }
     
     public void calculateArea(){
+        // initialize variables
+        double area = 0,positive = 0,negative = 0;
 
+        // DETERMINANT TECHNIQUE
+            // | p1x p1y | -> p2x * p1y - p1x * p2y 
+            // | p2x p2y | -> p3x * p4y - p2x * p1y 
+            // | p3x p3y | ...
+            // | p4x p4y | ...
+            // | p1x p1y | ...
+                // Sum all results
+                // Get absolute value
+                // Divide by 2
+        for(int i = 0 ; i < this.points.length; i++){
+            
+            // last one repeates first point
+            if(i == this.points.length-1){
+                positive = this.points[i].getX() * this.points[0].getY();
+                negative = this.points[0].getX() * this.points[i].getY();
+            }// otherwise go ahead
+            else{
+                positive = this.points[i].getX() * this.points[i+1].getY();
+                negative = this.points[i+1].getX() * this.points[i].getY();
+            }
+            // by the formula
+            area += positive - negative;
+            
+            // Debugging Code
+            //System.out.println("Positive: " + positive+ "\nNegative: " + negative + "\nArea: "+ area);
+        }
+
+        // if the area is calculated as 0 shift the ponints and recalculate
+        if(area == 0){
+            // get first point
+            Point p1 = this.points[0];
+            // overwrite second point to first one
+            this.points[0] = this.points[1];
+            // put first point to second place 
+            this.points[1] = p1;
+            // calculate again 
+            recalculateArea(); // WARNING - using recursion here may cause infinite loop !!
+                               // Hence define a new function 
+        }
+
+        // by the formula
+            // absolute value
+            // half of it
+        this.area = Math.abs(area) / 2;
+    }
+
+    // to avoid infinite loop
+    public void recalculateArea(){
+        
+        // SAME TECHNIQUE
         double area = 0,positive = 0,negative = 0;
 
         for(int i = 0 ; i < this.points.length; i++){
@@ -61,6 +113,9 @@ public class Quadrilateral {
             //System.out.println("Positive: " + positive+ "\nNegative: " + negative + "\nArea: "+ area);
         }
 
+        if(area == 0){
+            System.out.println("Please control the Points !!");
+        }
         this.area = Math.abs(area) / 2;
     }
 

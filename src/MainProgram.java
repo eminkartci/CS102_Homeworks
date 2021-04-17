@@ -20,10 +20,14 @@ public class MainProgram {
             rectangle.calculateArea();
             rectangle.plotOnConsole();
             // Square
-            Square square = new Square(new Point(0,0),new Point(6,0),new Point(6,6),new Point(0,6));
-            square.print_console();
+            // Square square = new Square(new Point(0,0),new Point(6,0),new Point(6,6),new Point(0,6));
+            // square.print_console();
+            // square.calculateArea();
+            // square.saveAsTxt();
+
+            Square square = new Square(new Point(0,0),new Point(6,0),new Point(0,6),new Point(6,6));
             square.calculateArea();
-            square.saveAsTxt();
+            square.print_console();
     }
     
 }
