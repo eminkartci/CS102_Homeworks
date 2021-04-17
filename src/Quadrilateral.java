@@ -2,7 +2,9 @@
 
 public class Quadrilateral {
 
+    // Attributes
     private Point[] points = new Point[4];
+    private double area;
 
 
     // Main constructure 
@@ -11,6 +13,7 @@ public class Quadrilateral {
         this.points[1] = p2;
         this.points[2] = p3;
         this.points[3] = p4;
+        calculateArea();
     }
 
     // to print console 
@@ -20,7 +23,8 @@ public class Quadrilateral {
 
     public String toString(){
         // type 
-        String content = "\n --- Quadrilateral --- ";
+        String content = "\n --- Quadrilateral --- " 
+                        +"\n | Area: " + this.area;
 
         // Points
         for( int i = 0 ; i < 4 ; i++){
@@ -57,7 +61,10 @@ public class Quadrilateral {
             //System.out.println("Positive: " + positive+ "\nNegative: " + negative + "\nArea: "+ area);
         }
 
-        area = Math.abs(area) / 2;
-        System.out.println("The are is " + area);
+        this.area = Math.abs(area) / 2;
+    }
+
+    public double getArea(){
+        return this.area;
     }
 }

@@ -15,7 +15,9 @@ public class Trapezoid extends Quadrilateral{
 
     public String toString(){
         // type 
-        String content = "\n --- Trapezoid --- ";
+        String content = "\n --- Trapezoid --- " 
+                        +"\n | Area : " + getArea()
+                        +"\n | Color: " + this.color;
 
         // Points
         for( int i = 0 ; i < 4 ; i++){

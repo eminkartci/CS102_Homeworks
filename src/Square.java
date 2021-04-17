@@ -25,8 +25,13 @@ public class Square extends Rectangle{
 
     public String toString(){
         // type 
-        String content = "\n --- Square --- ";
-
+        String content = "\n --- Square --- " 
+                        +"\n | ID       : " + getID()
+                        +"\n | Width    : " + getWidth()
+                        +"\n | Height   : " + getHeight()
+                        +"\n | Area     : " + getArea()
+                        +"\n | Color    : " + getColor()
+                        +"\n | Edge     : " + this.edge;
         // Points
         for( int i = 0 ; i < 4 ; i++){
             // order of the points starting from 1 to 4

@@ -21,7 +21,10 @@ public class Parallelogram extends Trapezoid{
 
     public String toString(){
         // type 
-        String content = "\n --- Parallelogram --- ";
+        String content = "\n --- Parallelogram --- " 
+                        +"\n | ID   : " + this.ID
+                        +"\n | Area : " + getArea()
+                        +"\n | Color: " + getColor();
 
         // Points
         for( int i = 0 ; i < 4 ; i++){
@@ -54,6 +57,10 @@ public class Parallelogram extends Trapezoid{
 
         }
 
+    }
+
+    public String getID(){
+        return this.ID;
     }
     
 }

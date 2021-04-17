@@ -1,12 +1,22 @@
 public class Rectangle extends Parallelogram{
 
+    private int height;
+    private int width;
+
     public Rectangle(Point p1, Point p2, Point p3, Point p4) {
         super(p1, p2, p3, p4);
+        this.width = calculateWidth();
+        this.height = calculateHeight();
     }
 
     public String toString(){
         // type 
-        String content = "\n --- Rectangle --- ";
+        String content = "\n --- Rectangle --- " 
+                        +"\n | ID       : " + getID()
+                        +"\n | Width    : " + this.width
+                        +"\n | Height   : " + this.height
+                        +"\n | Area     : " + getArea()
+                        +"\n | Color    : " + getColor();
 
         // Points
         for( int i = 0 ; i < 4 ; i++){
@@ -19,16 +29,16 @@ public class Rectangle extends Parallelogram{
 
     public void plotOnConsole(){
 
-        for(int i = 0 ; i < getHeight() ; i++){
+        for(int i = 0 ; i < this.height ; i++){
 
-            for (int j = 0 ; j < getWidth() ; j++){
-                System.out.print("*");
+            for (int j = 0 ; j < this.width ; j++){
+                System.out.print("* ");
             }
             System.out.println();
         }
     }
 
-    private int getWidth(){
+    private int calculateWidth(){
 
         int width = (int) Math.abs((getPoints()[0].getX() - getPoints()[1].getX()));
 
@@ -39,7 +49,7 @@ public class Rectangle extends Parallelogram{
         return width;
     }
 
-    private int getHeight(){
+    private int calculateHeight(){
 
         int height = (int) Math.abs((getPoints()[0].getY() - getPoints()[1].getY()));
 
@@ -50,4 +60,11 @@ public class Rectangle extends Parallelogram{
         return height;
     }
     
+    public int getWidth(){
+        return this.width;
+    }
+
+    public int getHeight(){
+        return this.height;
+    }
 }
