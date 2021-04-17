@@ -10,7 +10,7 @@ public class MainProgram {
             trapezoid.calculateArea();
 
             //Parallelogram
-            Parallelogram parallelogram = new Parallelogram(new Point(0,0),new Point(5,0),new Point(2,3),new Point(7,3));
+            Parallelogram parallelogram = new Parallelogram(new Point(0,0),new Point(5,0),new Point(2,3),new Point(7,3),"12");
             parallelogram.setRandomColor();
             parallelogram.print_console();
             parallelogram.calculateArea();

@@ -50,7 +50,7 @@ public class Parallelogram extends Trapezoid{
         try {
             // Create a filewriter
                 // file parameter
-            FileWriter myWriter = new FileWriter(new File(this.ID.replace(".", "")+"txt"));
+            FileWriter myWriter = new FileWriter(new File(this.ID.replace(".", "")+".txt"));
 
             // write it
             myWriter.write(toString());
