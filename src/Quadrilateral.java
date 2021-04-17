@@ -125,4 +125,8 @@ public class Quadrilateral {
     public double getArea(){
         return this.area;
     }
+
+    public void setArea(double area){
+        this.area=area;
+    }
 }

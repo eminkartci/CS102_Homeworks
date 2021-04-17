@@ -23,6 +23,11 @@ public class Square extends Rectangle{
         calculateEdge();
     }
 
+    // Override calculate area method
+    public void calculateArea(){
+        setArea( Math.pow(this.edge,2));
+    }
+
     public void calculateEdge(){
 
         // Find the points has same x axis

@@ -40,6 +40,11 @@ public class Rectangle extends Parallelogram{
         return content;
     }
 
+    // Override calculate area method
+    public void calculateArea(){
+        setArea(this.width * this.height);
+    }
+
     public void plotOnConsole(){
 
         for(int i = 0 ; i < this.height ; i++){
