@@ -1,5 +1,4 @@
 
-
 interface TreeFruit{
 
     // Every tree fruit does:
