@@ -15,4 +15,8 @@ public class Food extends Product {
         setTaxRate(18.);
         setPrice(1.);
     }
+
+    public String toString() {
+        return super.toString() + "\nWeight = " + this.weight + "\nExpiration Date = " + this.expirationDate;
+    }
 }

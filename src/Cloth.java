@@ -21,4 +21,8 @@ public class Cloth extends Product {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public String toString() {
+        return super.toString() + "\nBrand = " + this.brand + "\nColor = "+this.color + "\nQuantitiy = " + this.quantity;
+    }
 }
