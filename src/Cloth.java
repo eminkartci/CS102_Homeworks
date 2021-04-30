@@ -17,4 +17,8 @@ public class Cloth extends Product {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }
