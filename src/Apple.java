@@ -10,7 +10,7 @@ public class Apple extends Fruit implements TreeFruit{
     }
     @Override
     public void peel() {
-        
+        System.out.println("Peeling an apple.");
     }
     
 }

@@ -11,7 +11,7 @@ public class Banana extends Fruit implements TreeFruit{
 
     @Override
     public void peel() {
-        
+        System.out.println("Peeling a banana.");
     }
 
 
