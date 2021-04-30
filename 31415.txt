@@ -1,9 +1,0 @@
-
- --- Parallelogram --- 
- | ID   : 31415
- | Area : 15.0
- | Color: White
-Point 1: (0.0,0.0)
-Point 2: (5.0,0.0)
-Point 3: (7.0,3.0)
-Point 4: (2.0,3.0)
