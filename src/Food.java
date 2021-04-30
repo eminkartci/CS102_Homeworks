@@ -1,5 +1,6 @@
 
 public class Food extends Product {
+   
     private double weight;
     private String expirationDate;
 
