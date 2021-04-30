@@ -12,4 +12,8 @@ public class Detergent extends Cleaning{
         this.lts = lts;
         this.liquid = liquid;
     }
+
+    public String toString() {
+        return super.toString() + "\nLts = " + this.lts + "\nLiquid = " + this.liquid;
+    }
 }

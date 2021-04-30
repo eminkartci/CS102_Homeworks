@@ -8,4 +8,8 @@ public class Vegetables extends Food{
         setName(name);
     }
     
+    public String toString() {
+        return super.toString() + "\nOrganic = " + this.organic;
+    }
+    
 }
