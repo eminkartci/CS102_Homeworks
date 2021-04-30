@@ -6,6 +6,7 @@ public abstract class Fruit {
     public abstract String getVitamin();
 
     // GETTER SETTER
+    
     public void setColor(String color){
         this.color = color;
     }

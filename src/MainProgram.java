@@ -5,6 +5,10 @@ public class MainProgram {
 
     public static void main(String[] args){
 
+        ArrayList<Fruit> fruits = new ArrayList<Fruit>(); fruits.add(new Apple());
+        fruits.add(new Banana());
+        fruits.add(new Strawberry());
+        fruits.add(new Blackberry()); prepareFruits(fruits);
 
     }
 
