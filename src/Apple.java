@@ -1,4 +1,4 @@
-public class Apple extends Fruit{
+public class Apple extends Fruit implements TreeFruit{
 
     public Apple(){
         setColor("Green");
@@ -7,6 +7,10 @@ public class Apple extends Fruit{
     @Override
     public String getVitamin() {
         return "A " + "B12";
+    }
+    @Override
+    public void peel() {
+        
     }
     
 }
